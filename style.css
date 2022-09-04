@@ -113,8 +113,14 @@ img {
     background-color: #fff;
     border: 1px solid #000000;
     border-radius: 30px;
+    width: 250px;
     height: 250px;
     padding: 15px;
+}
+
+.choose__img-user {
+    width: 100%;
+    transform: scaleX(-1);
 }
 
 .choose__img-vs {
