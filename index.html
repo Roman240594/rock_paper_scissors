@@ -5,11 +5,71 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link type="image/ico" sizes="16x16" rel="icon" href="favicon.jpg">
+    <link rel="stylesheet" href="style.css">
+    <title>Game</title>
 </head>
 
 <body>
+    <div class="body__bg"></div>
+    <header>
+        <h1 class="title">Rock Paper Scissors</h1>
+    </header>
+    <main class="main">
+        <div class="choose">
+            <div class="wrapper choose__wrapper">
+                <div class="choose__content">
+                    <h3 class="title choose__title">Computer</h3>
+                    <div class="choose__img">
+                        <img src="image/csissors.png" alt="">
+                    </div>
+                </div>
+                <div class="choose__content-vs">
+                    <div class="choose__img choose__img-vs">
+                        <img src="image/vs.png" alt="">
+                    </div>
+                </div>
+                <div class="choose__content">
+                    <h3 class="title choose__title">You</h3>
+                    <div class="choose__img">
+                        <img src="image/paper.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sign">
+            <div class="wrapper">
+                <h3 class="title sign__title">Your choose</h3>
+                <div class="sign__buttons">
+                    <div class="sign__button">Rock</div>
+                    <div class="sign__button">Paper</div>
+                    <div class="sign__button">Scissors</div>
+                </div>
 
+            </div>
+        </div>
+        <div class="result">
+            <div class="wrapper">
+                <h3 class="title result__title">Total</h3>
+                <div class="result__content">
+                    <div class="result__item">
+                        <div class="result__name">Computer</div>
+                        <div class="result__score">0</div>
+                    </div>
+                    <div class="result__item">
+                        <div class="result__name">Draw</div>
+                        <div class="result__score">0</div>
+                    </div>
+                    <div class="result__item">
+                        <div class="result__name">You</div>
+                        <div class="result__score">0</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="main.js"></script>
 </body>
 
 </html>
