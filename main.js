@@ -29,22 +29,22 @@ const signArray = [{
 ];
 
 
-// let write = setTimeout(() => {
-//     userName = prompt('What is your name?');
-//     writeUserName();
-// }, 300);
+let write = setTimeout(() => {
+    userName = prompt('What is your name?');
+    writeUserName();
+}, 300);
 
-// let writeUserName = () => {
-//     if (userName == null || userName == undefined || userName == '') {
-//         for (let item of user) {
-//             item.innerText = 'You';
-//         }
-//     } else {
-//         for (let item of user) {
-//             item.innerText = userName;
-//         }
-//     }
-// };
+let writeUserName = () => {
+    if (userName == null || userName == undefined || userName == '') {
+        for (let item of user) {
+            item.innerText = 'You';
+        }
+    } else {
+        for (let item of user) {
+            item.innerText = userName;
+        }
+    }
+};
 
 let choosedSign = () => {
     userChoose = event.target.textContent;
