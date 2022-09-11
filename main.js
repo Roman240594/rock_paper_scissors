@@ -1,8 +1,12 @@
 const user = document.querySelectorAll('.name');
 const btn = document.querySelector('.sign__buttons');
 const userImage = document.querySelector('.choose__img-user');
+const computerImage = document.querySelector('.choose__img-computer');
 
 let userName;
+let userChoose;
+let signComputer;
+let signComputerArray = ['Rock', 'Paper', 'Scissors'];
 
 const signArray = [{
         'name': 'Rock',
@@ -19,36 +23,46 @@ const signArray = [{
 ];
 
 
-let write = setTimeout(() => {
-    userName = prompt('What is your name?');
-    writeUserName();
-}, 300);
+// let write = setTimeout(() => {
+//     userName = prompt('What is your name?');
+//     writeUserName();
+// }, 300);
 
-let writeUserName = () => {
-    if (userName == null || userName == undefined || userName == '') {
-        for (let item of user) {
-            item.innerText = 'You';
+// let writeUserName = () => {
+//     if (userName == null || userName == undefined || userName == '') {
+//         for (let item of user) {
+//             item.innerText = 'You';
+//         }
+//     } else {
+//         for (let item of user) {
+//             item.innerText = userName;
+//         }
+//     }
+// };
+
+let choosedSign = () => {
+    let userChoose = event.target.textContent;
+    for (let i = 0; i < signArray.length; i++) {
+        if (userChoose === signArray[i].name) {
+            addImage(userImage, signArray[i].image);
+            chooseComputer(signComputerArray);
+            console.log(userChoose);
         }
-    } else {
-        for (let item of user) {
-            item.innerText = userName;
+    }
+}
+
+function chooseComputer(array) {
+    let result = Math.floor(Math.random() * array.length);
+    signComputer = array[result];
+    for (let i = 0; i < signArray.length; i++) {
+        if (array[result] === signArray[i].name) {
+            addImage(computerImage, signArray[i].image);
         }
     }
 };
 
-let choosedSign = () => {
-    let key = event.target.textContent;
-    for (let i = 0; i < signArray.length; i++) {
-        if (key === signArray[i].name) {
-            addImage(signArray[i].image)
-            console.log(key);
-        }
-    }
+function addImage(player, link) {
+    player.src = link;
 }
-
-function addImage(link) {
-    userImage.src = link;
-}
-
 
 btn.addEventListener('click', choosedSign)
